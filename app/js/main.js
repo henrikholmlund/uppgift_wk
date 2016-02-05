@@ -5,27 +5,27 @@
 var doughnutData = [
     {
         value: 21,
-        color: "#BE4557",
-        highlight: "#cb6b79",
+        color: "#e64c65",
+        highlight: "#ec798c",
         label: "iOS"
     },
     {
         value: 48,
-        color: "#3E8F92",
-        highlight: "#4fb1b4",
+        color: "#11a8ab",
+        highlight: "#16d6d9",
         label: "Mac"
     },
 
     {
         value: 32,
-        color: "#5AAFE4",
-        highlight: "#86c4eb",
+        color: "#4fc4f6",
+        highlight: "#80d4f8",
         label: "Win"
     },
     {
         value: 9,
-        color: "#E19C49",
-        highlight: "#e8b475",
+        color: "#fcb150",
+        highlight: "#fdc782",
         label: "Linux"
     }
 ];
