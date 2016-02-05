@@ -1,0 +1,360 @@
+/* fonts */
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-M.ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu-regular';
+  src: url('../fonts/Ubuntu-R.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-light';
+  src: url('../fonts/Ubuntu-L.ttf');
+}
+
+
+
+/* color variables */
+
+$background-color: #1f253d;
+$background-big-div: #394264;
+$background-small-div: #50597b;
+
+$font-color: #ffffff;
+$font-color-grey: #838cab;
+
+$pie-chart-blue: #4fc4f6;
+$pie-chart-green: #11a8ab;
+$pie-chart-red: #e64c65;
+$pie-chart-yellow: #fcb150;
+
+/* size variables */
+
+$border-height: 6px;
+
+/* screen size variables */
+
+$small-min: 768px;
+$medium-min: 992px;
+$large-min: 1200px;
+
+
+/* loading fonts & colors for specific elements */
+
+h1, h2, h3 {
+  font-family: 'Ubuntu', 'Verdana', sans-serif;
+  color: $font-color;
+}
+
+p, a {
+  font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+  color: $font-color;
+}
+
+
+  /* Element styles */
+
+body {
+  background-color: $background-color;
+}
+
+span {
+  color: $font-color;
+
+}
+
+
+/* class styles */
+
+.flexbox-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+.big-div {
+
+  background-color: $background-big-div;
+  border-radius: 5px;
+  margin-top: 40px;
+
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.small-flexbox-container-1 {
+
+  :first-child {
+    border-radius: 0 0 0 5px;
+  }
+  :last-child {
+    margin-right: 0;
+    /* reminder for border-radius top-left | top-right | bottom-right | bottom-left */
+    border-radius: 0 0 5px 0;
+  }
+}
+
+.small-flexbox-container-1 > div {
+
+  background-color: $background-small-div;
+
+  h3 {
+    text-align: center;
+    color: $font-color-grey
+  }
+  p {
+    text-align: center;
+  }
+
+
+}
+
+.small-flexbox-container-2 {
+
+  :first-child {
+    border-radius: 0 0 0 5px;
+  }
+  :last-child {
+    margin-right: 0;
+    border-radius: 0 0 5px 0;
+  }
+}
+
+
+.border-blue {
+  border-top: $border-height solid $pie-chart-blue;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+
+
+  h3, p, span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+  }
+  &:hover {
+
+    background-color: lighten($background-small-div, 10%);
+    border-color: lighten($pie-chart-blue, 10%);
+
+  }
+
+}
+
+.border-yellow {
+  border-top: $border-height solid $pie-chart-yellow;
+  border-right: 1px solid $background-big-div;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+
+
+  h3, p, span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+  }
+  &:hover {
+
+    background-color: lighten($background-small-div, 10%);
+    border-color: lighten($pie-chart-yellow, 10%);
+    border-right: 1px solid $background-big-div;
+  }
+}
+
+.border-red {
+  h3, p, span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+  }
+  border-top: $border-height solid $pie-chart-red;
+  border-right: 1px solid $background-big-div;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+
+  &:hover {
+
+    background-color: lighten($background-small-div, 10%);
+    border-color: lighten($pie-chart-red, 10%);
+    border-right: 1px solid $background-big-div;
+  }
+}
+
+.border-green {
+  h3, p, span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+  }
+  border-top: $border-height solid $pie-chart-green;
+  border-right: 1px solid $background-big-div;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+
+
+
+  &:hover {
+
+    background-color: lighten($background-small-div, 10%);
+    border-color: lighten($pie-chart-green, 10%);
+    border-right: 1px solid $background-big-div;
+  }
+}
+
+/* colors for glyphicons */
+
+.fa-comment-o, .fa-eye, .fa-heart-o {
+  color: $font-color-grey;
+
+}
+
+
+.round-image {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: 30px;
+
+  img {
+    width: 200px;
+    border-radius: 100%;
+    border: 7px solid $font-color-grey;
+
+  }
+
+}
+
+.person-description {
+  text-align: center;
+  color: $font-color-grey;
+  font-size: 1.5em;
+  padding: 30px 50px
+}
+
+.plus-pull-right {
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  padding: 10px 0;
+  i {
+    width:24px;
+    height:28px;
+    color: $font-color-grey;
+    transition: color 0.5s ease;
+    &:hover {
+      color: lighten($font-color-grey, 10%);
+
+    }
+  }
+
+
+}
+
+.interaction-icons {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: $background-small-div;
+
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  p {
+    font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+    float: right;
+    font-size: 16pt;
+    padding-left: 10px;
+    vertical-align: text-top;
+
+
+
+  }
+
+
+}
+
+span.upper-percentage {
+
+  vertical-align: text-top;
+  font-size: 0.6em;
+
+}
+
+.percentage-numbers {
+  font-size: 26pt;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+
+/* id styles */
+
+
+#canvas-holder {
+  padding: 30px 0 0 0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  #chart-area {
+    //width: 70%;
+    //height: 70%;
+
+  }
+
+}
+
+
+.os-aud {
+  text-transform: uppercase;
+  font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+  padding-top: 20px;
+
+}
+
+
+/*   horrible hack for centering in the donut-chart, should really be done in js if time permits + have to add responsiveness later */
+
+.month-year {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: -45%;
+  margin-bottom: 45%;
+  h5 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+    font-size: 45px;
+    color: $font-color;
+    text-align: right;
+  }
+  span {
+    color: $font-color-grey;;
+  }
+}
+
+/* media queries */
+
+@media (min-width: $medium-min) {
+
+  .month-year {
+    margin-top: -50%;
+    margin-bottom: 45%;
+  }
+}
+
+@media (min-width: $large-min) {
+
+  .month-year {
+    margin-top: -47%;
+    margin-bottom: 45%;
+  }
+}
+
+
+
+
+
+
+
+
+

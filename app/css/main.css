@@ -1,0 +1,206 @@
+/* fonts */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu-M.ttf"); }
+
+@font-face {
+  font-family: 'Ubuntu-regular';
+  src: url("../fonts/Ubuntu-R.ttf"); }
+
+@font-face {
+  font-family: 'Ubuntu-light';
+  src: url("../fonts/Ubuntu-L.ttf"); }
+
+/* color variables */
+/* size variables */
+/* screen size variables */
+/* loading fonts & colors for specific elements */
+h1, h2, h3 {
+  font-family: 'Ubuntu', 'Verdana', sans-serif;
+  color: #ffffff; }
+
+p, a {
+  font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+  color: #ffffff; }
+
+/* Element styles */
+body {
+  background-color: #1f253d; }
+
+span {
+  color: #ffffff; }
+
+/* class styles */
+.flexbox-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.big-div {
+  background-color: #394264;
+  border-radius: 5px;
+  margin-top: 40px; }
+  .big-div h2 {
+    text-align: center; }
+
+.small-flexbox-container-1 :first-child {
+  border-radius: 0 0 0 5px; }
+
+.small-flexbox-container-1 :last-child {
+  margin-right: 0;
+  /* reminder for border-radius top-left | top-right | bottom-right | bottom-left */
+  border-radius: 0 0 5px 0; }
+
+.small-flexbox-container-1 > div {
+  background-color: #50597b; }
+  .small-flexbox-container-1 > div h3 {
+    text-align: center;
+    color: #838cab; }
+  .small-flexbox-container-1 > div p {
+    text-align: center; }
+
+.small-flexbox-container-2 :first-child {
+  border-radius: 0 0 0 5px; }
+
+.small-flexbox-container-2 :last-child {
+  margin-right: 0;
+  border-radius: 0 0 5px 0; }
+
+.border-blue {
+  border-top: 6px solid #4fc4f6;
+  transition: background-color 0.5s ease, border-color 0.5s ease; }
+  .border-blue h3, .border-blue p, .border-blue span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif; }
+  .border-blue:hover {
+    background-color: #646f9a;
+    border-color: #80d4f8; }
+
+.border-yellow {
+  border-top: 6px solid #fcb150;
+  border-right: 1px solid #394264;
+  transition: background-color 0.5s ease, border-color 0.5s ease; }
+  .border-yellow h3, .border-yellow p, .border-yellow span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif; }
+  .border-yellow:hover {
+    background-color: #646f9a;
+    border-color: #fdc782;
+    border-right: 1px solid #394264; }
+
+.border-red {
+  border-top: 6px solid #e64c65;
+  border-right: 1px solid #394264;
+  transition: background-color 0.5s ease, border-color 0.5s ease; }
+  .border-red h3, .border-red p, .border-red span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif; }
+  .border-red:hover {
+    background-color: #646f9a;
+    border-color: #ec798c;
+    border-right: 1px solid #394264; }
+
+.border-green {
+  border-top: 6px solid #11a8ab;
+  border-right: 1px solid #394264;
+  transition: background-color 0.5s ease, border-color 0.5s ease; }
+  .border-green h3, .border-green p, .border-green span {
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif; }
+  .border-green:hover {
+    background-color: #646f9a;
+    border-color: #16d6d9;
+    border-right: 1px solid #394264; }
+
+/* colors for glyphicons */
+.fa-comment-o, .fa-eye, .fa-heart-o {
+  color: #838cab; }
+
+.round-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; }
+  .round-image img {
+    width: 200px;
+    border-radius: 100%;
+    border: 7px solid #838cab; }
+
+.person-description {
+  text-align: center;
+  color: #838cab;
+  font-size: 1.5em;
+  padding: 30px 50px; }
+
+.plus-pull-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0; }
+  .plus-pull-right i {
+    width: 24px;
+    height: 28px;
+    color: #838cab;
+    transition: color 0.5s ease; }
+    .plus-pull-right i:hover {
+      color: #a1a8c0; }
+
+.interaction-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #50597b;
+  padding-top: 25px;
+  padding-bottom: 20px; }
+  .interaction-icons p {
+    font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+    float: right;
+    font-size: 16pt;
+    padding-left: 10px;
+    vertical-align: text-top; }
+
+span.upper-percentage {
+  vertical-align: text-top;
+  font-size: 0.6em; }
+
+.percentage-numbers {
+  font-size: 26pt;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* id styles */
+#canvas-holder {
+  padding: 30px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.os-aud {
+  text-transform: uppercase;
+  font-family: 'Ubuntu-regular', 'Verdana', sans-serif;
+  padding-top: 20px; }
+
+/*   horrible hack for centering in the donut-chart, should really be done in js if time permits + have to add responsiveness later */
+.month-year {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -45%;
+  margin-bottom: 45%; }
+  .month-year h5 {
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-family: 'Ubuntu-light', 'Verdana', sans-serif;
+    font-size: 45px;
+    color: #ffffff;
+    text-align: right; }
+  .month-year span {
+    color: #838cab; }
+
+/* media queries */
+@media (min-width: 992px) {
+  .month-year {
+    margin-top: -50%;
+    margin-bottom: 45%; } }
+
+@media (min-width: 1200px) {
+  .month-year {
+    margin-top: -47%;
+    margin-bottom: 45%; } }
